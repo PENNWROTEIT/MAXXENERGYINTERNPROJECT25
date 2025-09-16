@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>USER PROFILE</title>
+  <link rel="stylesheet" href="CSS\USERCSS\userpagecbyPWITss.css" />
+
+  <!-- ================= MOBILECOMPATCODE ================= -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+ 
+     <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+      <a href="#" class="logo">MAXX ENERGY</a>
+      <ul>
+        <li><a href="C:\Users\SurfaceOne\Documents\MAXX ENERGY PROJECT CLEANED UP\homehtml.html">Home</a></li>
+        <li><a href="C:\Users\SurfaceOne\Documents\MAXX ENERGY PROJECT CLEANED UP\abouthtml.html">About</a></li>
+        <li><a href="C:\Users\SurfaceOne\Documents\MAXX ENERGY PROJECT CLEANED UP\faqhtml.html">FAQ</a></li>
+        <li><a href="C:\Users\SurfaceOne\Documents\MAXX ENERGY PROJECT CLEANED UP\contacthtml.html">Contact</a></li>
+        <li><a href="C:\Users\SurfaceOne\Documents\MAXX ENERGY PROJECT CLEANED UP\datahtml.html">MAXX Data</a></li>
+      </ul>
+    </nav>
+ 
+    
+
+
+  <!-- ======== MAIN PROFILE PAGE ======== -->
+  <main class="profile-page" role="main" aria-label="User profile page">
+    <!-- ===== PROFILE PHOTO + UPLOAD ===== -->
+    <section class="card profile-photo" aria-labelledby="photoTitle">
+      <h2 id="photoTitle">Profile Photo</h2>
+      <div class="avatar-wrap">
+        <img id="profileImage" src="IMAGES/userpic.png" alt="User avatar" />
+      </div>
+
+      <input id="fileInput" type="file" accept="image/*" />
+      <label for="fileInput" class="upload-btn" title="Upload a new profile image">Upload Photo</label>
+
+      <div class="photo-size-note">Drag the Profile Photo Size slider to resize.</div>
+    </section>
+
+    <!-- ===== USER INFORMATION ===== -->
+    <section class="card user-info" aria-labelledby="infoTitle">
+      <h2 id="infoTitle">User Information</h2>
+
+      <div class="info-row"><span class="label">Email:</span><span class="value">user@example.com</span></div>
+      <div class="info-row"><span class="label">Interests:</span><span class="value">Coding, Music, Fitness</span></div>
+      <div class="info-row"><span class="label">Location:</span><span class="value">Earth 🌍</span></div>
+
+      <hr />
+
+      <h3 class="section-small">Adjustable Fields</h3>
+      <label class="small-input">Email:
+        <input id="emailField" type="email" value="user@example.com" />
+      </label>
+      <label class="small-input">Interests:
+        <input id="interestsField" type="text" value="Coding, Music, Fitness" />
+      </label>
+      <label class="small-input">Location:
+        <input id="locationField" type="text" value="Earth 🌍" />
+      </label>
+    </section>
+
+    <!-- ===== SKILL SET ===== -->
+    <section class="card skill-set" aria-labelledby="skillsTitle">
+      <h2 id="skillsTitle">Skill Set</h2>
+
+      <p class="hint">Click a badge to favorite it. Drag a skill to reorder. Use the sliders to change levels.</p>
+
+      <!-- ===== ADD SKILL FORM ===== -->
+      <form id="addSkillForm" class="add-skill" aria-label="Add new skill">
+        <input id="newSkillIcon" type="text" maxlength="2" placeholder="Emoji/icon (e.g. ⚡)" aria-label="Skill icon" />
+        <input id="newSkillName" type="text" placeholder="Skill name (e.g. TypeScript)" required aria-label="Skill name" />
+        <input id="newSkillLevel" type="number" min="0" max="100" value="50" aria-label="Initial skill level" />
+        <button type="submit" class="btn">Add Skill</button>
+      </form>
+
+      <!-- SKILLS LIST (DRAG & DROP ENABLED) -->
+      <div id="skillsList" class="skills-list" role="list" aria-label="Skills list" tabindex="0">
+        <!-- existing skill items will be inserted by HTML as templates below -->
+        <div class="skill-item" draggable="true" data-skill="JavaScript" role="listitem">
+          <div class="skill-left">
+            <!-- SVG circular progress placeholder -->
+            <svg class="skill-ring" viewBox="0 0 42 42" role="img" aria-hidden="true">
+              <circle class="ring-bg" cx="21" cy="21" r="15.9" />
+              <circle class="ring-fg" cx="21" cy="21" r="15.9" stroke-dasharray="0 100" />
+            </svg>
+            <button class="badge" aria-pressed="false" type="button">⚡ JavaScript</button>
+          </div>
+
+          <div class="skill-right">
+            <div class="skill-head">
+              <span class="skill-percent" aria-hidden="true">0%</span>
+            </div>
+            <div class="skill-bar-outer">
+              <div class="skill-bar"></div>
+            </div>
+            <input class="skill-slider" type="range" min="0" max="100" value="85" aria-label="JavaScript skill level" />
+          </div>
+        </div>
+
+        <div class="skill-item" draggable="true" data-skill="CSS Animations" role="listitem">
+          <div class="skill-left">
+            <svg class="skill-ring" viewBox="0 0 42 42"><circle class="ring-bg" cx="21" cy="21" r="15.9" /><circle class="ring-fg" cx="21" cy="21" r="15.9" stroke-dasharray="0 100" /></svg>
+            <button class="badge" aria-pressed="false" type="button">✨ CSS Animations</button>
+          </div>
+          <div class="skill-right">
+            <div class="skill-head"><span class="skill-percent" aria-hidden="true">0%</span></div>
+            <div class="skill-bar-outer"><div class="skill-bar"></div></div>
+            <input class="skill-slider" type="range" min="0" max="100" value="78" aria-label="CSS Animations skill level" />
+          </div>
+        </div>
+
+        <div class="skill-item" draggable="true" data-skill="React" role="listitem">
+          <div class="skill-left">
+            <svg class="skill-ring" viewBox="0 0 42 42"><circle class="ring-bg" cx="21" cy="21" r="15.9" /><circle class="ring-fg" cx="21" cy="21" r="15.9" stroke-dasharray="0 100" /></svg>
+            <button class="badge" aria-pressed="false" type="button">⚛️ React</button>
+          </div>
+          <div class="skill-right">
+            <div class="skill-head"><span class="skill-percent" aria-hidden="true">0%</span></div>
+            <div class="skill-bar-outer"><div class="skill-bar" style="width:0%"></div></div>
+            <input class="skill-slider" type="range" min="0" max="100" value="70" aria-label="React skill level" />
+          </div>
+        </div>
+
+        <div class="skill-item" draggable="true" data-skill="Python" role="listitem">
+          <div class="skill-left">
+            <svg class="skill-ring" viewBox="0 0 42 42"><circle class="ring-bg" cx="21" cy="21" r="15.9" /><circle class="ring-fg" cx="21" cy="21" r="15.9" stroke-dasharray="0 100" /></svg>
+            <button class="badge" aria-pressed="false" type="button">🐍 Python</button>
+          </div>
+          <div class="skill-right">
+            <div class="skill-head"><span class="skill-percent" aria-hidden="true">0%</span></div>
+            <div class="skill-bar-outer"><div class="skill-bar" style="width:0%"></div></div>
+            <input class="skill-slider" type="range" min="0" max="100" value="60" aria-label="Python skill level" />
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-actions">
+        <button id="animateAll" class="btn" type="button">REFRESH</button>
+        <button id="resetFav" class="btn ghost" type="button">CLEAR</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="SCRIPTS\USERSCRIPT\userpagebyPWITscript.js"></script>
+</body>
+</html>
