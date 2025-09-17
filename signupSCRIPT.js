@@ -102,3 +102,23 @@ function showError(input, message) {
   errorMessage.textContent = message;
   errorMessage.style.display = "block";
 }
+
+// Replace your existing register function with:
+async function register() {
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const name = document.getElementById('name').value;
+    const employeeId = document.getElementById('employeeId').value;
+    const result = await maxxApi.register(username, email, password, name, employeeId);
+    if (result.success) {
+        alert('Registration successful!');
+        // Your existing success code here
+    } else {
+        alert('Registration failed: ' + result.error);
+        // Your existing error code here
+    }
+}
+
+
+
