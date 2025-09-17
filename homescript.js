@@ -41,3 +41,23 @@ stopBtn.addEventListener('click', () => {
   video.currentTime = 0; // reset to beginning
 });
 
+
+
+
+
+
+
+// Replace your existing login function with:
+async function login() {
+    const username = document.getElementById('username').value; // use your field ID
+    const password = document.getElementById('password').value; // use your field ID
+    const result = await maxxApi.login(username, password);
+    if (result.success) {
+        alert('Login successful!');
+        // Your existing success code here
+    } else {
+        alert('Login failed: ' + result.error);
+        // Your existing error code here
+    }
+}
+
